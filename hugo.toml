@@ -1,0 +1,25 @@
+# To switch to the custom domain: change baseURL to "https://blog.hendersonvillemtg.com/" and add static/CNAME containing "blog.hendersonvillemtg.com"
+baseURL = "https://cf9880.github.io/blog-hendersonvillemtg/"
+languageCode = "en-us"
+title = "CFC Mortgage Blog"
+enableRobotsTXT = true
+[outputs]
+  home = ["HTML", "RSS"]
+[sitemap]
+  changefreq = "weekly"
+[params]
+  description = "Hendersonville, TN mortgage and home buying insights from local broker Jay Spurlin: FHA, VA, USDA, Conventional, Jumbo and HELOC."
+  brand = "CFC Mortgage — Hendersonville"
+  tagline = "Helping Hendersonville feel like home..."
+  phone = "(615) 357-7800"
+  nmls = "103035"
+  email = "info@cfcmtg.com"
+  mainsite = "https://www.hendersonvillemtg.com/"
+  maindomain = "www.hendersonvillemtg.com"
+  city = "Hendersonville"
+  region = "TN"
+  street = ""
+  area = "Hendersonville & Middle Tennessee"
+  bg = "#521b3c"
+  accent = "#5f1631"
+  accent2 = "#f5e6ec"
