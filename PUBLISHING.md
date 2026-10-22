@@ -1,6 +1,6 @@
 # Publishing a post (CFC Mortgage blog)
 
-Live: https://cf9880.github.io/blog-hendersonvillemtg/ (future: https://blog.hendersonvillemtg.com/)
+Live: https://blog.hendersonvillemtg.com/ (old https://cf9880.github.io/blog-hendersonvillemtg/ redirects here)
 
 1. Create `content/posts/<slug>.md` (lowercase, hyphens, e.g. `content/posts/fha-loan-limits-2027.md`). The slug becomes the URL: `/posts/<slug>/`.
 2. Start the file with front matter:
@@ -33,7 +33,7 @@ Use one of these:
 
 Recommended: JPG or WebP, landscape 1200x630 or larger, under 500 KB, lowercase hyphenated file name. Commit the image in the same commit as the post.
 
-## Switching to the custom domain
+## Custom domain (done Oct 22, 2026)
 1. GoDaddy DNS for hendersonvillemtg.com: add `CNAME` record, Name `blog`, Value `cf9880.github.io`, TTL 1 hour.
 2. In `hugo.toml` set `baseURL = "https://blog.hendersonvillemtg.com/"` and create `static/CNAME` containing `blog.hendersonvillemtg.com`.
 3. Repo Settings → Pages → Custom domain `blog.hendersonvillemtg.com`, then enable Enforce HTTPS.

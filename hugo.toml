@@ -1,5 +1,5 @@
-# To switch to the custom domain: change baseURL to "https://blog.hendersonvillemtg.com/" and add static/CNAME containing "blog.hendersonvillemtg.com"
-baseURL = "https://cf9880.github.io/blog-hendersonvillemtg/"
+# Custom domain: blog.hendersonvillemtg.com (static/CNAME)
+baseURL = "https://blog.hendersonvillemtg.com/"
 languageCode = "en-us"
 title = "CFC Mortgage Blog"
 enableRobotsTXT = true
