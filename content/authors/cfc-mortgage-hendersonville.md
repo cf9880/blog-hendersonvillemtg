@@ -7,7 +7,7 @@ description: "The Hendersonville, Tennessee blog of Coastal Funding Corporation 
 
 CFC Mortgage — Hendersonville is the Hendersonville, Tennessee blog of Coastal Funding Corporation (NMLS 103035), a mortgage broker, with local broker Jay Spurlin. We help buyers and homeowners in Hendersonville and Middle Tennessee with FHA, VA, USDA, Conventional, Jumbo and HELOC loans.
 
-CFC Mortgage — Hendersonville serves Tennessee only.
+Coastal Funding Corporation offers primary-residence loans in Florida, South Carolina and Tennessee, and DSCR loans nationwide.
 
 ## Contact
 

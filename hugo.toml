@@ -10,7 +10,7 @@ enableRobotsTXT = true
 [params]
 logo = "images/logo.png"
   publisher = "Coastal Funding Corporation"
-  description = "Tennessee-only: Hendersonville, TN mortgage and home buying insights from local broker Jay Spurlin: FHA, VA, USDA, Conventional, Jumbo and HELOC."
+  description = "Hendersonville, TN mortgage and home buying insights from local broker Jay Spurlin: FHA, VA, USDA, Conventional, Jumbo and HELOC."
   brand = "CFC Mortgage — Hendersonville"
   tagline = "Helping Hendersonville feel like home..."
   phone = "(615) 357-7800"
