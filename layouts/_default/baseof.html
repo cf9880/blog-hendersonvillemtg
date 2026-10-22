@@ -5,6 +5,7 @@
 {{ $desc := cond .IsHome site.Params.description (default site.Params.description (.Description | default .Summary | plainify)) }}
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $desc | truncate 160 }}">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}"><link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <link rel="canonical" href="{{ .Permalink }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ $title }}"><meta property="og:description" content="{{ $desc | truncate 200 }}">
@@ -12,7 +13,9 @@
 {{ $og := partial "imgurl.html" (dict "page" . "abs" true) }}{{ with $og }}<meta property="og:image" content="{{ . }}"><meta property="og:image:alt" content="{{ default $.Title $.Params.image_alt }}"><meta name="twitter:image" content="{{ . }}">{{ end }}
 <meta name="twitter:card" content="summary_large_image">
 {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
-<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" (slice "MortgageBroker" "LocalBusiness") "name" site.Params.brand "url" site.Params.mainsite "telephone" site.Params.phone "email" site.Params.email "slogan" site.Params.tagline "areaServed" site.Params.area "identifier" (printf "NMLS %s" site.Params.nmls) "address" (dict "@type" "PostalAddress" "streetAddress" site.Params.street "addressLocality" site.Params.city "addressRegion" site.Params.region "addressCountry" "US") | jsonify | safeJS }}</script>
+{{ $org := dict "@context" "https://schema.org" "@type" (slice "MortgageBroker" "LocalBusiness") "name" site.Params.brand "url" site.Params.mainsite "telephone" site.Params.phone "email" site.Params.email "slogan" site.Params.tagline "areaServed" site.Params.area "identifier" (printf "NMLS %s" site.Params.nmls) "address" (dict "@type" "PostalAddress" "streetAddress" site.Params.street "addressLocality" site.Params.city "addressRegion" site.Params.region "addressCountry" "US") }}
+{{ with site.Params.logo }}{{ $org = merge $org (dict "logo" (dict "@type" "ImageObject" "url" (. | absURL) "width" 695 "height" 403)) }}{{ end }}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
 {{ if and .IsPage (eq .Section "posts") }}{{ partial "schema-post.html" . }}{{ else if and .IsPage (eq .Section "authors") }}{{ partial "schema-author.html" . }}{{ end }}
 <style>
 :root{--bg:{{ site.Params.bg }};--ac:{{ site.Params.accent }};--ac2:{{ site.Params.accent2 }}}

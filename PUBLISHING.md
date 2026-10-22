@@ -57,3 +57,7 @@ author: "CFC Mortgage — Hendersonville"
 ```
 
 `static/llms.txt` summarizes this site for AI assistants. Update it if the business details change.
+
+## Service area (Tennessee only)
+
+CFC Mortgage — Hendersonville serves **Tennessee only**. Posts, FAQs, `description` text and author bios on this blog must not mention Florida, South Carolina, other states, or nationwide DSCR lending. The site schema sets `areaServed` to Tennessee.
